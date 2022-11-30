@@ -95,7 +95,6 @@ function App() {
               <Route path="/Memo" element={<Memo />} />
               <Route path="/addMemo" element={<AddMemo />}></Route>
               <Route path="/updateEvent" element={<UpdateEvent />}></Route>
-         
               {/* <Route path="/" element={<Door />} /> */}
               <Route path="/ChatPage" element={<ChatPage />} /> 
               {/*  <Route path="/test" element={<Test/>}/> */}

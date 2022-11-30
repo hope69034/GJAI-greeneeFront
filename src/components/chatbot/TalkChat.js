@@ -2,7 +2,7 @@ import React from "react";
 import "./TalkChat.css";
 /* import { Configuration, OpenAIApi } from "https://cdn.skypack.dev/openai"; */
 const { Configuration, OpenAIApi }  = require("openai");
-const configuration = new Configuration({apiKey: "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",});
+const configuration = new Configuration({apiKey: "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",});
 const openai = new OpenAIApi(configuration);
 
 function TalkChat() {

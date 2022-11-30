@@ -20,19 +20,19 @@ function Talk() {
     console.log("submit success", idRef.current.value);
 
     axios
-      .post("http://127.0.0.1:5000/chatbotTalk", {
+      .post("http://127.0.0.1:5000/translate", {
         id: idRef.current.value,
       })
-      .then(() => {
-        console.log("success");
+      .then((req) => {
+        console.log("success axios");
+        console.log(req.request.ontimeout.responseText); /*  */
       })
       .catch(() => {
-        console.log("failed");
+        console.log("failed axios");
       });
   };
 
   const idRef = useRef();
-  const pwRef = useRef();
 
   return (
     <>

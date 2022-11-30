@@ -13,7 +13,7 @@ import a7 from "../../img/a7.jpg";
 /* talk */
 /* import { Configuration, OpenAIApi } from "https://cdn.skypack.dev/openai"; */
 const { Configuration, OpenAIApi }  = require("openai");
-const configuration = new Configuration({apiKey: "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",});
+const configuration = new Configuration({apiKey: "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",});
 const openai = new OpenAIApi(configuration);
 /* avatar random */
 let avatarArray = [a1,a2,a3,a4,a5,a6,a7]

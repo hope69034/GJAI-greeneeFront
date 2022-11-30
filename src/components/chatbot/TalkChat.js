@@ -2,8 +2,14 @@ import React from "react";
 import "./TalkChat.css";
 /* import { Configuration, OpenAIApi } from "https://cdn.skypack.dev/openai"; */
 const { Configuration, OpenAIApi }  = require("openai");
+const configuration = new Configuration({apiKey: "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",});
+const openai = new OpenAIApi(configuration);
+
 function TalkChat() {
+
   function abc() {
+
+    /* 인풋 */
     let template = `
         <div className='line'>
             <span className='chat-box min'>${
@@ -15,14 +21,8 @@ function TalkChat() {
       .querySelector(".chat-content")
       .insertAdjacentHTML("beforeend", template);
 
-    const configuration = new Configuration({
-      apiKey: "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",
-    });
-
-    const openai = new OpenAIApi(configuration);
-
-    openai
-      .createCompletion({
+    /* 아웃풋 */
+    openai.createCompletion({
         model: "text-ada-001",
         prompt: document.querySelector("#input").value, //유저인풋
         temperature: 0.7,
@@ -30,10 +30,8 @@ function TalkChat() {
         top_p: 1,
         frequency_penalty: 0,
         presence_penalty: 0,
-      })
-      .then((result) => {
-        //아웃풋
-        console.log(result.data);
+      }).then((result) => {
+        console.log(result.data.choices[0].text);
         let template = `
           <div className='line'>
           <span className='chat-box'>${result.data.choices[0].text}</span>
@@ -44,6 +42,7 @@ function TalkChat() {
       });
   }
 
+  /* 출력 */
   return (
     <>
       <div className="chat-content">

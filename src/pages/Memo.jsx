@@ -6,7 +6,7 @@ import greenee2 from "../img/greenee.png";
 
 import LabelBottomNavigation from "../components/LabelBottomNavigation";
  
-import ChatbotSteps from '../components/chatbot/ChatbotSteps'
+ 
 /* import TalkChat from '../components/chatbot/TalkChat' */
 
 /* const chatbotButtonStyle = {

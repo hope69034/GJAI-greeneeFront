@@ -3,7 +3,7 @@ import sendImage from "../../../img/send-icon.png";
 import React, { useState } from "react";
 const { Configuration, OpenAIApi } = require("openai");
 const configuration = new Configuration({
-  apiKey: "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",
+  apiKey: "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",
 });
 const openai = new OpenAIApi(configuration);
 

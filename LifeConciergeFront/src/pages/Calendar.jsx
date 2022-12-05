@@ -10,7 +10,6 @@ export default () => {
       <Calendar />
       <AddEventButton />
       <LabelBottomNavigation></LabelBottomNavigation>
-   
     </div>
   );
 };

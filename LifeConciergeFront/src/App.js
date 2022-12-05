@@ -1,6 +1,3 @@
-// import Door from "./pages/Door";
-/* import Test from './pages/Test'; */
- 
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import ChatPage from "./pages/ChatPage";
 import Home from "./pages/Home";
@@ -16,9 +13,8 @@ import UserInfo from "./pages/UserInfo";
 import AddEvent from "./components/AddEvent";
 import UpdateEvent from "./components/UpdateEvent";
 import AddMemo from "./components/AddMemo";
-// import ChatbotSteps from "./components/chatbot/ChatbotSteps";
-import LabelBottomNavigation from "./components/LabelBottomNavigation";
- 
+//import LabelBottomNavigation from "./components/LabelBottomNavigation";
+
 /* css 파일 임포트 */
 import "./dabin.css";
 import "./index.css";
@@ -70,12 +66,8 @@ function App() {
   });
   return (
     <div className="App">
-      <ThemeProvider theme={theme}>
-        {" "}
-        {/* theme 무조건 가장 외곽에 */}
-        <CacheProvider value={cache}>
-          {" "}
-          {/* 므이 css */}
+      <ThemeProvider theme={theme}>{/* theme 무조건 가장 외곽에 */}
+        <CacheProvider value={cache}>{/* 므이 css */}
           <BrowserRouter>
             <Routes>
               <Route path="/" element={<Home />} />
@@ -87,13 +79,8 @@ function App() {
               <Route path="/Memo" element={<Memo />} />
               <Route path="/addMemo" element={<AddMemo />}></Route>
               <Route path="/updateEvent" element={<UpdateEvent />}></Route>
-         
-              {/* <Route path="/" element={<Door />} /> */}
               <Route path="/ChatPage" element={<ChatPage />} /> 
-              {/*  <Route path="/test" element={<Test/>}/> */}
             </Routes>
-           {/* <LabelBottomNavigation></LabelBottomNavigation> */}  
-              {/* <ChatbotSteps></ChatbotSteps> */}  
           </BrowserRouter>
         </CacheProvider>
       </ThemeProvider>

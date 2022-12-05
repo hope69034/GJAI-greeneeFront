@@ -293,7 +293,6 @@ router.post('/lifeConcierge/api/UpdateEvent', (req, res) => {
         res.json(rows);
       }
     })
-
   });
 }
 )
@@ -304,11 +303,7 @@ router.get("/test", (req, res) => {
   });
 });
 
-
-
-
 /* 세형 */
-
 /* 챗봇으로 성향정보 수정하기 */
 router.post("/chatbotUpdate", (req, res) => {
   console.log("chatbotUpdate 라우터 진입");
@@ -344,7 +339,7 @@ router.post("/chatbotUpdate", (req, res) => {
   music=?,
   food=?,
   drink=?
-  WHERE pk="1";`;
+  WHERE pk="1";`; /* 요기 수정  const eventId = req.body.event_id;    where event_id=? */
   conn.query(
     sql,
     [
@@ -360,13 +355,22 @@ router.post("/chatbotUpdate", (req, res) => {
       drink,
     ],
     (err, rows) => {
-      console.log("컨쿼리진입");
-      res.redirect("http://127.0.0.1:3000/");
+        if (err) {
+          console.log('컨쿼리진입 후 에러')
+          res.redirect("http://127.0.0.1:3000/");
+        } else if (rows.length == 0) {
+          console.log("컨쿼리진입 후 DB적용 안됨");
+          res.redirect("http://127.0.0.1:3000/");
+          //res.send("DB 적용 안됨");
+        } else {
+          //res.json(rows);
+          console.log("컨쿼리진입 후 DB적용 성공");
+          console.log('rows: '+rows)
+          res.redirect("http://127.0.0.1:3000/");
+        }
     }
   );
 });
-
-
 /* 맵api라우터 */
 router.post('/map', function (req, res) {
   console.log('map라우터 진입 성공')
@@ -374,7 +378,7 @@ router.post('/map', function (req, res) {
   let userInput1 = req.body.userInput1
   let userInput2 = req.body.userInput2
   console.log(`유저인풋1 : ${userInput1}, 유저인풋2 : ${userInput2}`)
-  //const result = spawn("python3", ["map.py",[userInput1,userInput2]]);
+  //const result = spawn("python3", ["map.py",userInput1,userInput2]]);
   //const result = spawn("python3", ["map.py"]);
   // const result = spawn("python", ["map.py"]);
   const result = spawn("python", ["map.py", userInput1, userInput2]);
@@ -383,9 +387,7 @@ router.post('/map', function (req, res) {
     console.log('stdout 진입 성공')
     console.log('result : ' + result.toString());
     console.log(`파이썬 파일 변수 선언 성공  |  유저인풋1 : ${userInput1}, 유저인풋2 : ${userInput2}`)
-    res.json(result.toString().trim())
-    //res.json(result.toString().slice(0,(result.toString().length-6)))
-
+    res.json(result.toString().slice(0,(result.toString().length-6)))
   })
 });
 /* 맵api test라우터 */
@@ -394,8 +396,4 @@ router.get('/maptest', function (req, res) {
   //일단로컬로
   res.redirect("http://127.0.0.1:5500/server/maptest.html")
 });
-
-
-
-
 module.exports = router;

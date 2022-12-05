@@ -24,7 +24,7 @@ class ChatbotSteps extends Component {
       footerStyle: { background: "#efefef" },
       bubbleOptionStyle: { background: "#f39c12" },
       botAvatar: avatarArray[Math.floor(Math.random() * avatarArray.length)],
-      floating: "true" /* 채팅창 버튼으로 자동 플로팅 */,
+      floating: "true", /* 채팅창 버튼으로 자동 플로팅 */
       floatingStyle: floatingStyle,
       //floatingIcon={greenihead},
       //submitButtonStyle:{},
@@ -144,7 +144,7 @@ function randomT() {
 const steps = [
   {
     id: "0",
-    message: randomF(),
+    message:  randomF(),
     trigger: "1",
   },
   {

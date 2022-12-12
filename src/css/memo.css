@@ -1,0 +1,186 @@
+@font-face {
+    font-family: 'S-CoreDream-3Light';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#myform fieldset{
+    display: inline-block; /* 하위 별점 이미지들이 있는 영역만 자리를 차지함.*/
+    border: 0; /* 필드셋 테두리 제거 */
+}
+#myform input[type=radio]{
+    display: none; /* 라디오박스 감춤 */
+}
+#myform label{
+    font-size: 150%; /* 이모지 크기 */
+    color: transparent; /* 기존 이모지 컬러 제거 */
+    text-shadow: 0 0 0 #ffffff; /* 새 이모지 색상 부여 */
+}
+
+#myform label:hover{
+    text-shadow: 0 0 0 #ff9c00; /* 마우스 호버 */
+}
+
+#myform input[type=radio]:checked ~ label{
+    text-shadow: 0 0 0 #ff9c00; /* 마우스 클릭 체크 */
+}
+
+.memo1 {
+    line-height: 250%;
+    margin-left: 3px;
+    margin-bottom: 35px;
+}
+
+.memo2 {
+    line-height: 250%;
+    margin: 10px 20px 0 20px;
+}
+
+h1, h4 {
+    font-family: 'S-CoreDream-3Light';
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-family: 'S-CoreDream-3Light';
+    margin: 0;
+}
+
+h3 {
+    font-family: 'S-CoreDream-3Light';
+    margin: 0;
+}
+
+.star_white1 {
+    font-size: 150%; /* 이모지 크기 */
+    color: transparent; /* 기존 이모지 컬러 제거 */
+    text-shadow: 0 0 0 #bebebe; 
+}
+.star_yellow1 {
+    font-size: 150%; /* 이모지 크기 */
+    color: transparent; /* 기존 이모지 컬러 제거 */
+    text-shadow: 0 0 0 #ff9c00;
+}
+
+.css-1rn6c7p-MuiButtonBase-root-MuiFab-root{
+    box-shadow:none !important;
+}
+
+.arrow{
+    margin-left: 5%;
+    margin-right: -5%;
+    margin-top: 3%;
+    width: 35px;
+    display: inline;
+    float: left;
+    border: none;
+}
+
+.button{
+    background-color:transparent;
+    margin-left: 2%;
+    margin-top: 5%;
+    border-style: hidden;
+    border: 0px;
+    border-width: 0px;
+    cursor: pointer;
+}
+
+.top{
+    width: 100%;
+}
+
+.trash{
+    position: relative;
+    background-color:transparent;
+    right: 20px;
+    margin-top: 5%;
+    width: 35px;
+    float: right;
+    border: none;
+}    
+
+.mui2{
+    margin-top: 600px;
+    margin-left: 340px;
+}
+
+.myButton {
+	background-color:#bebebe;
+	border-radius:42px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:12px 76px;
+	text-decoration:none;
+}
+.myButton:hover {
+	background-color:#ffffff;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+.home_btn {
+    width: 375px;
+    height: 40px;
+    font-size: 20px;
+    font-weight: 600;   
+    font-family: "BMJUA";
+    color: black;
+    border: none;
+    background: #bebebe;
+    border-radius: 50px;
+    /* margin: 0px; */
+    text-align: left;
+    padding-left:20px;
+    margin-top: 5px;
+    
+}
+
+.home1_form {
+    position:fixed;
+    margin-left: 83%;
+    margin-top:190%;
+    width: 53px;
+    height: 33px;
+    font-size: 15px;
+    font-weight: 600;   
+    font-family: "BMJUA";
+    color: #ffffff;
+    border: none;
+    background: #7e7e7e;
+    border-radius: 15px;
+    text-align: center;    
+}
+
+.memo_won{
+    margin-top: 10px;
+    margin-left: 89%;
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    font-weight: 600;   
+    font-family: "S-CoreDream-3Light";
+    color: #ffffff;
+    border: none;
+    background: #bebebe;
+    border-radius: 50px;
+    text-align: center;
+    line-height: 1px;
+}
+
+.memo_text{
+    margin-top: 10px;
+    padding: 0 20px;
+    
+    text-align: justify;
+}
+
+.memo_text h4 {
+    line-height: 1.5;
+}

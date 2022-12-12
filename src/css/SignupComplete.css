@@ -1,0 +1,54 @@
+.completedpage{
+    font-family: 'MaplestoryOTFBold';
+    height: 100vh;
+    background-color:#D7EDBC;
+    margin: 0 auto;
+    margin-block-start: 0;
+    background-size: cover;
+}
+.compelte_ment{
+    font-size: 30px;
+    margin: 8vh 0;
+    text-align: center;
+}
+.title{
+    font-family:'S-CoreDream-5light';
+    text-align: center;
+    display: inline;
+    flex-direction: column;
+    height: 50px;
+    margin-top: 0%;
+    margin-bottom: 5%;
+    vertical-align: middle;
+}
+
+.greeneecomplete_c2{
+    width: 90%;
+    margin-bottom: 10vh;
+}
+
+.back_btn1{
+    background-color: #D7EDBC;
+}
+
+.complete_ment{
+    font-family: 'MaplestoryOTFBold';
+    text-align: center;
+    font-size: 35px;
+    color: #00cc00;
+    font-weight: bold;
+    margin-top:5%;
+    margin-bottom: 10%;
+}
+
+.complete_btn{
+    font-family: 'MaplestoryOTFBold';
+    margin-top: 20vh;
+    margin-bottom: 5vh;
+    width: 80vw;
+    margin: auto;
+    font-size: 23px;
+    color: #ffffff;    
+    background-color: #2ecc71; 
+    border-radius: 20px;
+}

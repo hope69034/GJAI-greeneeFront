@@ -1,0 +1,49 @@
+@font-face {
+    font-family: 'MaplestoryOTFBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/MaplestoryOTFBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.page{
+    height: 100vh;
+}
+
+.title{
+    font-family:'S-CoreDream-5light';
+    font-size: px;
+    text-align: center;
+    display: inline;
+    flex-direction: column;
+    height: 3vh;
+    margin-top: 3vh;
+    margin-bottom: 5%;
+    vertical-align: middle;
+}
+
+.s_h_line{
+    font-family: 'MaplestoryOTFBold';
+    padding-top: 3vh; 
+    font-size: 35px;
+    font-weight: 1000;
+    padding-bottom: 3vh;
+    text-align: center;
+}
+
+.edit_back{
+    margin-left: 5%;
+    margin-right: -5%;
+    margin-top: 3%;
+    width: 22px;  
+    display: inline;
+    float: left;
+    border: none;
+    background-color: white;
+}
+
+.finish_btn{
+    width: px;
+    font-size: 23px;
+    color: black;
+}
+
